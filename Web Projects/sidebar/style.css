@@ -1,0 +1,240 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .container{
+    width: 4vw;
+    margin-right: 2vw;
+    margin-left: 94vw;
+    height: 4vh;
+    margin-bottom: 94vh;
+    margin-top: 2vh;
+} */
+
+body{
+    background-color: rgb(240, 247, 250);
+}
+.container{
+    background-color: transparent;
+    width: 98vw;
+    margin-right:2vw; 
+
+    /* margin-top: 10px;
+    margin-left:  60vw;
+    position: relative;
+    left : 30vw; */
+    
+/*     
+    margin-right: 2px;
+    margin-left: 67vw; */
+    display: flex;
+    justify-content: space-between;
+}
+.button {
+    border : none;
+    outline: none;
+    background-color: transparent;
+    color: rgb(15, 151, 175);
+    align-self : flex-start;
+    padding-top: 20px;
+}
+.fa-bars{
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-name: b;
+    /* padding : 22px; */
+
+}
+
+@keyframes b{
+    from{
+        font-size : 60px;
+    }
+
+    to{
+        font-size : 60px;
+    }
+    /* 25%{
+        font-size: 50px;
+    }
+    40%{
+        font-size : 45px;
+    } */
+    50% {
+        font-size: 40px;
+        /* position : relative;
+        top : 3px;
+        left: 3px;
+        right : 3px;
+        bottom: 3px; */
+        /* padding: 2px; */
+        margin-top: 6px;
+        
+    }
+    
+}
+
+.sidebar {
+    width: 30vw;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.heading-div{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    margin: 0 0px 40px 0px;
+    padding: 0px 20px;
+    padding-top:3%;
+    align-items: center;
+    font-family: monospace;
+
+}
+
+
+/* .list{
+     display: block;    
+} */
+
+.links{
+    display: block;
+}
+
+
+.footer-div{
+    margin-bottom: 2vh;
+    height: 6vh;
+}
+
+.content{
+    height : 30vh;
+    /* background-color: royalblue ; */
+    margin-bottom: 50vh;
+}
+
+.links{
+    padding: 12px 23px;
+    font-size: 30px;
+    text-decoration: none;
+    color: rgb(33, 72, 124);
+    font-family: monospace;
+    transition: 0.4s ease-out;
+}
+
+.links:hover{
+    transform: scale(0.97);
+    /* font-size: 32px;  if it is activated there ll b shake in the heading due to font resizing*/ 
+}
+
+#addict{
+    color : rgb(36, 110, 170)
+}
+.list-items{
+    transition: 0.3s ease-in;
+    list-style: none;
+}
+.list-items:hover{
+    background-color: rgb(168, 211, 224);
+}
+
+.fa-times{
+    font-size: 35px;
+}
+.cross{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    transition: 0.4s ease;
+    background-color: transparent;
+    color:rgb(204, 36, 36);
+    /* padding-right: 10px; */
+}
+.cross:hover{
+    transform : rotate(360deg);
+}
+
+.heading{
+    font-size: 30px;
+    /* padding-left: 15px; */
+}
+
+.social-div{
+    width: 40%;
+    margin: 0 30%;
+    padding :1% 0;
+    display: flex;
+    justify-content: space-around;
+}
+.social-media-links{
+    font-size: 29px;
+    color: rgb(84, 139, 175);
+    transition: 0.3s ease-out;
+}
+.social-media-links:hover{
+    
+    color: rgb(9, 47, 71);
+}
+
+.sidebar{
+    transform: translateX(-100%);
+}
+
+.anime{
+    animation-name: sidebar-transition;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    transform: translateX(0);
+    
+}
+
+.reverse-anime{
+    animation-name : slidebar-goback;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transform: translateX(-100%);
+}
+
+
+
+
+@keyframes sidebar-transition{
+    from{
+        transform : translateX(-100%)
+    }
+    to{
+        transform: translateX(0);
+        
+    }
+}
+
+@keyframes slidebar-goback {
+    from{
+        transform : translateX(0);
+    }
+    to{
+        transform : translateX(-100%);
+    }
+}
+@media screen and (max-width : 768px){
+    .container{
+        width: 100vw;
+    }
+     .button.mobile{
+        display: none;
+        /* padding : 0; */
+        margin : 0;
+    }
+    .sidebar{
+        width : 100vw;
+        margin:0;
+        padding:0;
+    }
+    .button{
+        padding-right: 25px;
+        padding-top: 15px;
+    }
+}
